@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: next-service
+  labels:
+    run: next-service
+spec:
+  selector:
+    app: next-deployment
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
